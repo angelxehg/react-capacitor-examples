@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, NavLink } from 'react-router-dom'
 
 export const Navbar = props => (
-  <nav className='navbar navbar-expand-sm navbar-light bg-light'>
+  <nav className='navbar navbar-expand-sm navbar-dark bg-dark'>
     <div className='container-md'>{props.children}</div>
   </nav>
 )
