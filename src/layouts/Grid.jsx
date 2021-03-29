@@ -1,16 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
+import useClasses from '../hooks/use-classes';
 
 const availableSizes = [
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'
 ];
-
-const useClasses = (baseClass = '', classes = '') => {
-  if (!classes) {
-    return baseClass;
-  }
-  return baseClass + ' ' + classes;
-}
 
 export const Row = (props) => {
   const { className } = props;

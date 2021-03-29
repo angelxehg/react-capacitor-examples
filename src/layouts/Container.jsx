@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const useClasses = (baseClass = '', classes = '') => {
-  if (!classes) {
-    return baseClass;
-  }
-  return baseClass + ' ' + classes;
-}
+import useClasses from '../hooks/use-classes';
 
 export const Container = (props) => {
   const { className, children } = props;
