@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const useClasses = (baseClass, classes = '') => {
+const useClasses = (baseClass = '', classes = '') => {
   if (!classes) {
     return baseClass;
   }
