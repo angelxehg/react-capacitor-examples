@@ -1,17 +1,18 @@
 import React from 'react';
 
-import DefaultNavbar from "../components/Navbar"
+import DefaultNavbar from "../components/Navbar";
+import { Container } from '../layouts/Container';
 
 const LayoutsPage = () => {
   return (
     <div>
       <DefaultNavbar/>
-      <div className="container pt-2 pb-2">
+      <Container className="pt-3 pb-3">
         <header>
           <h1>Layouts</h1>
           <p>Pruebas con layouts disponibles en Bootstrap</p>
         </header>
-      </div>
+      </Container>
     </div>
   )
 }
