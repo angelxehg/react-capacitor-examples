@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarItem, NavbarToggler } from "../components/Navbar"
 
-const HomePage = () => {
+const LayoutsPage = () => {
   return (
     <div>
       <Navbar>
@@ -16,12 +16,12 @@ const HomePage = () => {
       </Navbar>
       <div className="container pt-2 pb-2">
         <header>
-          <h1>React + Capacitor Examples</h1>
-          <p>Hola mundo</p>
+          <h1>Layouts</h1>
+          <p>Pruebas con layouts disponibles en Bootstrap</p>
         </header>
       </div>
     </div>
   )
 }
 
-export default HomePage;
+export default LayoutsPage;

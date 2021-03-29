@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarItem, NavbarToggler } from "../components/Navbar"
 
-const HomePage = () => {
+const PluginsPage = () => {
   return (
     <div>
       <Navbar>
@@ -16,12 +16,12 @@ const HomePage = () => {
       </Navbar>
       <div className="container pt-2 pb-2">
         <header>
-          <h1>React + Capacitor Examples</h1>
-          <p>Hola mundo</p>
+          <h1>Plugins</h1>
+          <p>Pruebas con plugins disponibles en Capacitor</p>
         </header>
       </div>
     </div>
   )
 }
 
-export default HomePage;
+export default PluginsPage;
