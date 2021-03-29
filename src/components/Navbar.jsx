@@ -59,3 +59,17 @@ NavbarItem.propTypes = {
   title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
 }
+
+const DefaultNavbar = () => (
+  <Navbar>
+    <NavbarBrand title="React + Capacitor" to="/" />
+    <NavbarToggler />
+    <NavbarCollapse>
+      <NavbarItem title="Inicio" to="/home" />
+      <NavbarItem title="Layouts" to="/layouts" />
+      <NavbarItem title="Plugins" to="/plugins" />
+    </NavbarCollapse>
+  </Navbar>
+)
+
+export default DefaultNavbar;
