@@ -12,6 +12,12 @@ const PluginsPage = () => {
           <h1>Plugins</h1>
           <p>Pruebas con plugins disponibles en Capacitor</p>
         </header>
+        <main>
+          <h2 className="mt-3">Capacitor</h2>
+          <p>
+            Trabajo en progreso...
+          </p>
+        </main>
       </Container>
     </div>
   )
