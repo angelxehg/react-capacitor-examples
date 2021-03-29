@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import DefaultNavbar from "../components/Navbar";
 import { Container } from '../layouts/Container';
 import { Column, Row } from '../layouts/Grid';
 
 const samples = [];
-for (let i = 1; i <= 8; i++) {
+for (let i = 1; i <= 20; i++) {
   const item = {
     id: i,
     title: `Elemento #${i}`,
@@ -15,6 +15,14 @@ for (let i = 1; i <= 8; i++) {
 }
 
 const LayoutsPage = () => {
+
+  // Valores y estados
+  const [cardsNumber, setCardsNumber] = useState(8);
+
+  // Funciones
+  const rangedSamples = () => samples.slice(0, cardsNumber);
+
+  // Renderizado
   return (
     <div>
       <DefaultNavbar />
@@ -26,7 +34,15 @@ const LayoutsPage = () => {
         <main>
           <h2 className="mt-3">Cards</h2>
           <Row>
-            {samples.map(i => <Column key={i.id} xl="3" lg="4" md="6" className="p-1" >
+            <Column xl="3" lg="4" md="6">
+              <div className="mb-3">
+                <label htmlFor="cardsRange" className="form-label">¿Cuantos cards mostrar?: {cardsNumber}</label>
+                <input type="range" className="form-range" min="1" max="20" id="cardsRange" value={cardsNumber} onChange={(e) => setCardsNumber(e.target.value)} />
+              </div>
+            </Column>
+          </Row>
+          <Row>
+            {rangedSamples().map(i => <Column key={i.id} xl="3" lg="4" md="6" className="p-1" >
               <div className="card">
                 <div className="card-body">
                   <h3 className="card-title">{i.title}</h3>

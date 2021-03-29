@@ -10,7 +10,7 @@ const HomePage = () => {
       <Container className="pt-3 pb-3">
         <header>
           <h1>React + Capacitor Examples</h1>
-          <p>Hola mundo</p>
+          <p>Ejemplos de uso de Capacitor en un proyecto con React</p>
         </header>
       </Container>
     </div>
