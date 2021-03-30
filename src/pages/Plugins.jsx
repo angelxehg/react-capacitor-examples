@@ -8,11 +8,13 @@ import { Column, Row } from '../layouts/Grid';
 import BrowserImplementation, { browserPluginData } from '../plugins/Browser';
 import ClipboardImplementation, { clipboardPluginData } from '../plugins/Clipboard';
 import DeviceImplementation, { devicePluginData } from '../plugins/Device';
+import StatusBarImplementation, { statusBarPluginData } from '../plugins/StatusBar';
 
 const allPlugins = [
   browserPluginData,
   clipboardPluginData,
-  devicePluginData
+  devicePluginData,
+  statusBarPluginData,
 ];
 
 const PluginsPage = () => {
@@ -30,6 +32,9 @@ const PluginsPage = () => {
       </Route>
       <Route path={`${path}/${devicePluginData.title}`}>
         <DeviceImplementation/>
+      </Route>
+      <Route path={`${path}/${statusBarPluginData.title}`}>
+        <StatusBarImplementation/>
       </Route>
       <Route exact path={path}>
         <DefaultNavbar />
