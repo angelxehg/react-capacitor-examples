@@ -2,6 +2,11 @@
 
 Ejemplos de uso de Capacitor en un proyecto con React
 
+- [Código](https://github.com/angelxehg/react-capacitor-examples)
+- [Demo PWA](https://react-capacitor-examples.netlify.app/)
+- [Demo Android](https://github.com/angelxehg/react-capacitor-examples/releases)
+- [Más proyectos](https://angelxehg.com/projects)
+
 ## Instalación
 
 Utilice estos comandos para clonar e instalar la aplicación:
