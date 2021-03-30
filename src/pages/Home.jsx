@@ -18,6 +18,11 @@ const HomePage = () => {
           <p>Ejemplos de uso de Capacitor en un proyecto con React</p>
         </header>
         <main>
+          <h2>Versiones</h2>
+          <ul>
+            <li><a href="https://react-capacitor-examples.netlify.app">PWA</a> </li>
+            <li><a href="https://github.com/angelxehg/react-capacitor-examples/releases">Android</a></li>
+          </ul>
           <h2>Contenidos</h2>
           <Row>
             <Column xl="3" lg="4" md="6" className="p-1" >
