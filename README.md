@@ -74,3 +74,11 @@ Utilice estos pasos para probar la aplicación en un dispositivo, con Live Reloa
   - iOS: `npx cap open ios`
 
 NOTA: NO hacer commit de este cambio en [capacitor.config.json](./capacitor.config.json), ni en [android/app/src/main/assets/capacitor.config.json](./android/app/src/main/assets/capacitor.config.json). Para desactivar Live Reload hay que quitar la propiedad `server` y ejecutar los pasos desde `npx cap sync`
+
+## Despliegue en Netlify
+
+Use la siguiente configuración para desplegar en Netlify
+
+- Build command: `react-scripts build`
+
+- Publish directory: `build/`
