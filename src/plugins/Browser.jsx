@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types'
 import { Plugins } from '@capacitor/core';
 
@@ -34,14 +34,15 @@ const BrowserImplementation = () => {
 
   // Valores y estados
   const { title, description, docs } = browserPluginData;
+  const [logs, setLogs] = useState(['Plugin inicializado ' + new Date().toTimeString()]);
 
   // Efectos
   useEffect(() => {
-    Browser.addListener('browserFinished', (info) => {
-      console.log('browserFinished', info)
+    Browser.addListener('browserFinished', () => {
+      setLogs(logs.concat(['browserFinished ' + new Date().toTimeString()]))
     });
-    Browser.addListener('browserPageLoaded', (info) => {
-      console.log('browserPageLoaded', info)
+    Browser.addListener('browserPageLoaded', () => {
+      setLogs(logs.concat(['browserPageLoaded ' + new Date().toTimeString()]))
     });
     return () => {
       Browser.removeAllListeners();
@@ -77,6 +78,10 @@ const BrowserImplementation = () => {
                 Repositorio Proyecto
               </ExternalLink>
             </li>
+          </ul>
+          <h2>Logs</h2>
+          <ul>
+            {logs.map((text, i) => <li key={i}>{text}</li>)}
           </ul>
         </main>
       </Container>
