@@ -13,15 +13,25 @@ const HomePage = () => {
         <header>
           <h1>
             React + Capacitor Examples
-            <span className="badge bg-secondary ms-2">v0.1.0</span>
+            <span className="badge bg-secondary ms-2">v0.2.0</span>
           </h1>
           <p>Ejemplos de uso de Capacitor en un proyecto con React</p>
         </header>
         <main>
-          <h2>Versiones</h2>
+          <h2>Enlaces</h2>
           <ul>
-            <li><a href="https://react-capacitor-examples.netlify.app">PWA</a> </li>
-            <li><a href="https://github.com/angelxehg/react-capacitor-examples/releases">Android</a></li>
+            <li>
+              <a href="https://angelxehg.github.io/react-capacitor-examples">Repositorio</a>
+            </li>
+            <li>
+              <a href="https://angelxehg.com/projects">Más proyectos</a>
+            </li>
+            <li>
+              <a href="https://react-capacitor-examples.netlify.app">Versión PWA</a>
+            </li>
+            <li>
+              <a href="https://github.com/angelxehg/react-capacitor-examples/releases">Versión Android</a>
+            </li>
           </ul>
           <h2>Contenidos</h2>
           <Row>
