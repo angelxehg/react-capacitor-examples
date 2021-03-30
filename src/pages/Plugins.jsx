@@ -7,10 +7,12 @@ import { Column, Row } from '../layouts/Grid';
 
 import BrowserImplementation, { browserPluginData } from '../plugins/Browser';
 import ClipboardImplementation, { clipboardPluginData } from '../plugins/Clipboard';
+import DeviceImplementation, { devicePluginData } from '../plugins/Device';
 
 const allPlugins = [
   browserPluginData,
-  clipboardPluginData
+  clipboardPluginData,
+  devicePluginData
 ];
 
 const PluginsPage = () => {
@@ -25,6 +27,9 @@ const PluginsPage = () => {
       </Route>
       <Route path={`${path}/${clipboardPluginData.title}`}>
         <ClipboardImplementation/>
+      </Route>
+      <Route path={`${path}/${devicePluginData.title}`}>
+        <DeviceImplementation/>
       </Route>
       <Route exact path={path}>
         <DefaultNavbar />
