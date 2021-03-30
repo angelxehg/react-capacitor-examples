@@ -6,9 +6,11 @@ import { Container } from '../layouts/Container';
 import { Column, Row } from '../layouts/Grid';
 
 import BrowserImplementation, { browserPluginData } from '../plugins/Browser';
+import ClipboardImplementation, { clipboardPluginData } from '../plugins/Clipboard';
 
 const allPlugins = [
-  browserPluginData
+  browserPluginData,
+  clipboardPluginData
 ];
 
 const PluginsPage = () => {
@@ -20,6 +22,9 @@ const PluginsPage = () => {
     <Switch>
       <Route path={`${path}/${browserPluginData.key}`}>
         <BrowserImplementation />
+      </Route>
+      <Route path={`${path}/${clipboardPluginData.key}`}>
+        <ClipboardImplementation/>
       </Route>
       <Route exact path={path}>
         <DefaultNavbar />
