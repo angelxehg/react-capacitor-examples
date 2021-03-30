@@ -9,7 +9,8 @@ const { Device } = Plugins;
 export const devicePluginData = {
   title: "Device",
   description: "Permite leer información del dispositivo",
-  docs: "https://capacitorjs.com/docs/apis/device"
+  docs: "https://capacitorjs.com/docs/apis/device",
+  enabled: true
 }
 
 const DeviceImplementation = () => {

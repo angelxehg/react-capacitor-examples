@@ -46,8 +46,8 @@ const PluginsPage = () => {
           <main>
             <h2 className="mt-3">Official</h2>
             <Row>
-              {allPlugins.map(i => <Column key={i.title} xl="3" lg="4" md="6" className="p-1" >
-                <div className="card">
+              {allPlugins.filter(i => i.enabled === true).map(i => <Column key={i.title} xl="3" lg="4" md="6" className="p-1" >
+                <div className="card" style={{height: '100%'}}>
                   <div className="card-body">
                     <h3 className="card-title">{i.title}</h3>
                     <p className="card-text">{i.description}</p>

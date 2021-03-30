@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Plugins, StatusBarStyle } from '@capacitor/core';
+import { Capacitor, Plugins, StatusBarStyle } from '@capacitor/core';
 
 import DefaultNavbar from "../components/Navbar";
 import { Container } from '../layouts/Container';
@@ -9,7 +9,8 @@ const { StatusBar } = Plugins;
 export const statusBarPluginData = {
   title: "Status Bar",
   description: "Permite controlar Status Bar",
-  docs: "https://capacitorjs.com/docs/apis/status-bar"
+  docs: "https://capacitorjs.com/docs/apis/status-bar",
+  enabled: ['ios', 'android'].includes(Capacitor.platform)
 }
 
 const StatusBarImplementation = () => {

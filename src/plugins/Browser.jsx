@@ -10,7 +10,8 @@ const { Browser } = Plugins;
 export const browserPluginData = {
   title: "Browser",
   description: "Permite abrir vinculos en un navegador In-App",
-  docs: "https://capacitorjs.com/docs/apis/browser"
+  docs: "https://capacitorjs.com/docs/apis/browser",
+  enabled: true
 }
 
 export const ExternalLink = (props) => {

@@ -9,7 +9,8 @@ const { Clipboard } = Plugins;
 export const clipboardPluginData = {
   title: "Clipboard",
   description: "Permite leer o modificar portapapeles",
-  docs: "https://capacitorjs.com/docs/apis/clipboard"
+  docs: "https://capacitorjs.com/docs/apis/clipboard",
+  enabled: true
 }
 
 const ClipboardImplementation = () => {
