@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# react-capacitor-examples
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ejemplos de uso de Capacitor en un proyecto con React
 
-## Available Scripts
+- [Código](https://github.com/angelxehg/react-capacitor-examples)
+- [Demo PWA](https://react-capacitor-examples.netlify.app/)
+- [Demo Android](https://github.com/angelxehg/react-capacitor-examples/releases)
+- [Más proyectos](https://angelxehg.com/projects)
 
-In the project directory, you can run:
+## Instalación
 
-### `npm start`
+Utilice estos comandos para clonar e instalar la aplicación:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Clonar el repositorio: `git clone https://github.com/angelxehg/react-capacitor-examples`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Instalar dependencias: `cd react-capacitor-examples` & `npm install`
 
-### `npm test`
+- Iniciar servidor de desarrollo: `npm run start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Calidad
 
-### `npm run build`
+Utilice estos comandos para mantener la calidad del código
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Unit testing: `npm run test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Code linting: `npm run lint`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación en Dispositivos
 
-### `npm run eject`
+Compilar y probar aplicación en dispositivos:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Compilar assets: `npm run build`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Añadir plataforma (solo si no se ha añadido los directorios `android` y/o `ios`):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - Android: `npx cap add android`. Requiere [Android Studio](https://developer.android.com/studio/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - iOS: `npx cap add ios`. Requiere [XCode](https://developer.apple.com/xcode/). Requiere [CocoaPods](https://guides.cocoapods.org/using/getting-started.html#installation). Tambien se puede instalar con `brew install cocoapods`.
 
-## Learn More
+- Copiar assets y actualizar plugins:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Android: `npx cap sync android`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - iOS: `npx cap sync ios`
 
-### Code Splitting
+- Abrir IDE y compilar (Se abrirá XCode o Android Studio):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - Android: `npx cap open android`
 
-### Analyzing the Bundle Size
+  - iOS: `npx cap open ios`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Live Reload en Dispositivos
 
-### Making a Progressive Web App
+Utilice estos pasos para probar la aplicación en un dispositivo, con Live Reload activado:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Iniciar servidor de desarrollo: `npm run start`
 
-### Advanced Configuration
+- Modificar [capacitor.config.json](./capacitor.config.json), y añadir `server` con la url y puerto del paso anterior, por ejemplo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+"server": {
+  "url": "http://192.168.1.68:3000",
+  "cleartext": true
+},
+```
 
-### Deployment
+- Asegurarse de permitir el puerto `3000` en el Firewall
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- En otra terminal copiar assets y actualizar plugins:
 
-### `npm run build` fails to minify
+  - Android: `npx cap sync android`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - iOS: `npx cap sync ios`
+
+- Abrir IDE y compilar (Se abrirá XCode o Android Studio):
+
+  - Android: `npx cap open android`
+
+  - iOS: `npx cap open ios`
+
+NOTA: NO hacer commit de este cambio en [capacitor.config.json](./capacitor.config.json), ni en [android/app/src/main/assets/capacitor.config.json](./android/app/src/main/assets/capacitor.config.json). Para desactivar Live Reload hay que quitar la propiedad `server` y ejecutar los pasos desde `npx cap sync`
+
+## Despliegue en Netlify
+
+Use la siguiente configuración para desplegar en Netlify
+
+- Build command: `react-scripts build`
+
+- Publish directory: `build/`
