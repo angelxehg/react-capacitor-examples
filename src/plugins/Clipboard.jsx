@@ -7,7 +7,6 @@ import { Container } from '../layouts/Container';
 const { Clipboard } = Plugins;
 
 export const clipboardPluginData = {
-  key: "clipboard",
   title: "Clipboard",
   description: "Permite leer o modificar portapapeles",
   docs: "https://capacitorjs.com/docs/apis/clipboard"

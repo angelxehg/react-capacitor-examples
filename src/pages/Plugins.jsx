@@ -20,10 +20,10 @@ const PluginsPage = () => {
 
   return (
     <Switch>
-      <Route path={`${path}/${browserPluginData.key}`}>
+      <Route path={`${path}/${browserPluginData.title}`}>
         <BrowserImplementation />
       </Route>
-      <Route path={`${path}/${clipboardPluginData.key}`}>
+      <Route path={`${path}/${clipboardPluginData.title}`}>
         <ClipboardImplementation/>
       </Route>
       <Route exact path={path}>
@@ -36,12 +36,12 @@ const PluginsPage = () => {
           <main>
             <h2 className="mt-3">Official</h2>
             <Row>
-              {allPlugins.map(i => <Column key={i.key} xl="3" lg="4" md="6" className="p-1" >
+              {allPlugins.map(i => <Column key={i.title} xl="3" lg="4" md="6" className="p-1" >
                 <div className="card">
                   <div className="card-body">
                     <h3 className="card-title">{i.title}</h3>
                     <p className="card-text">{i.description}</p>
-                    <Link to={`${path}/${i.key}`}>Ver ejemplos</Link>
+                    <Link to={`${path}/${i.title}`}>Ver ejemplos</Link>
                   </div>
                 </div>
               </Column>)}

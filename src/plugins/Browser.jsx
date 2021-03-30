@@ -8,7 +8,6 @@ import { Container } from '../layouts/Container';
 const { Browser } = Plugins;
 
 export const browserPluginData = {
-  key: "browser",
   title: "Browser",
   description: "Permite abrir vinculos en un navegador In-App",
   docs: "https://capacitorjs.com/docs/apis/browser"
